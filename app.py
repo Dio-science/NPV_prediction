@@ -19,7 +19,7 @@ def home():
 @app.route('/predict',methods=['POST'])
 def predict():
 
-    int_features = [int(x) for x in request.form.values()]
+    int_features = [float(x) for x in request.form.values()]
     period = float(int_features[2])
     Dis_rate = float(int_features[0])
     Undis_CF = float(int_features[1])
