@@ -34,7 +34,7 @@ def predict():
     output = round(prediction[0], 2)
     period, Dis_rate, Dis_factor, Undis_CF, Pre_Val, Dis_val = round(period), round(Dis_rate, 2), round(Dis_factor, 2), round(Undis_CF, 2), round(Pre_Val, 2), round(Dis_val, 2)
 
-    return render_template('index.html', prediction_text='The discount factor = {}, discounted value = ${}, PV = ${}. The Predicted NPV over a period of {} years is ${}'.format(Dis_factor,Dis_val,Pre_Val,period,output))
+    return render_template('index.html', prediction_text='The Discounted Value = ${}, PV = ${}. The Predicted NPV over a period of {} years is ${}'.format(Dis_val,Pre_Val,period,output))
 
 @app.route('/results',methods=['POST'])
 def results():
